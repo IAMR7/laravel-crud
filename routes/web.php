@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\RouteUri;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/siswa', function () {
+    return view('siswa', [
+        'nama'  =>  'Reza Febriansyah',
+        'nim'   =>  '183200031'
+    ]);
+});
+
+Route::get('/guru/{nama_guru?}', function ($nama_guru = 'Endah Nurista') {
+    return view('guru', [
+        'nama_guru' =>  $nama_guru
+    ]);
 });
