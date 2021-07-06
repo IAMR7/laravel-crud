@@ -18,8 +18,12 @@ Route::get('/', function () {
     return view('v_home');
 });
 
-Route::get('/v_siswa', function () {
-    return view('siswa', [
+Route::get('/about', function () {
+    return view('v_about');
+});
+
+Route::get('/siswa', function () {
+    return view('v_siswa', [
         'nama'  =>  'Reza Febriansyah',
         'nim'   =>  '183200031'
     ]);
