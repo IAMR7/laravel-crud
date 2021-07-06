@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('v_home');
 });
 
-Route::get('/siswa', function () {
+Route::get('/v_siswa', function () {
     return view('siswa', [
         'nama'  =>  'Reza Febriansyah',
         'nim'   =>  '183200031'
@@ -26,7 +26,9 @@ Route::get('/siswa', function () {
 });
 
 Route::get('/guru/{nama_guru?}', function ($nama_guru = 'Endah Nurista') {
-    return view('guru', [
+    return view('v_guru', [
         'nama_guru' =>  $nama_guru
+        
+        
     ]);
 });
