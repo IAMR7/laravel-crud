@@ -1,4 +1,4 @@
-@extends('layouts.v_templates')
+@extends('layouts.v_template')
 
 @section('content')
     <h1>Halaman HOME</h1>
